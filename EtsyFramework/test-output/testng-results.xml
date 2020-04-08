@@ -2,24 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20708" started-at="2020-04-05T07:55:20Z" finished-at="2020-04-05T07:55:41Z">
+  <suite name="Default suite" duration-ms="41523" started-at="2020-04-08T12:31:47Z" finished-at="2020-04-08T12:32:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20708" started-at="2020-04-05T07:55:20Z" finished-at="2020-04-05T07:55:41Z">
-      <class name="com.etsyframewok.Tests.VerifyLogo">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.etsyframewok.Tests.VerifyLogo@28feb3fa]" name="launchBrowser" is-config="true" duration-ms="14472" started-at="2020-04-05T13:25:21Z" finished-at="2020-04-05T13:25:35Z">
+    <test name="Default test" duration-ms="41523" started-at="2020-04-08T12:31:47Z" finished-at="2020-04-08T12:32:28Z">
+      <class name="com.etsyframework.Testcase.TestRegression">
+        <test-method status="PASS" signature="Tc_01()[pri:0, instance:com.etsyframework.Testcase.TestRegression@1f1c7bf6]" name="Tc_01" duration-ms="12479" started-at="2020-04-08T18:01:47Z" finished-at="2020-04-08T18:01:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="etsyVerifyLogo()[pri:0, instance:com.etsyframewok.Tests.VerifyLogo@28feb3fa]" name="etsyVerifyLogo" duration-ms="5086" started-at="2020-04-05T13:25:35Z" finished-at="2020-04-05T13:25:40Z">
+        </test-method> <!-- Tc_01 -->
+        <test-method status="PASS" signature="Tc_02()[pri:0, instance:com.etsyframework.Testcase.TestRegression@1f1c7bf6]" name="Tc_02" is-config="true" duration-ms="29003" started-at="2020-04-08T18:01:59Z" finished-at="2020-04-08T18:02:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- etsyVerifyLogo -->
-        <test-method status="PASS" signature="quitBrowser()[pri:0, instance:com.etsyframewok.Tests.VerifyLogo@28feb3fa]" name="quitBrowser" is-config="true" duration-ms="1115" started-at="2020-04-05T13:25:40Z" finished-at="2020-04-05T13:25:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowser -->
-      </class> <!-- com.etsyframewok.Tests.VerifyLogo -->
+        </test-method> <!-- Tc_02 -->
+      </class> <!-- com.etsyframework.Testcase.TestRegression -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

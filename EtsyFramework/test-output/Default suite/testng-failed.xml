@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Default suite]" parallel="none">
+  <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="com.etsyframewok.Tests.VerifyLogo">
+      <class name="com.etsyframework.Testcase.TestRegression">
         <methods>
-          <include name="etsyVerifyLogo"/>
-          <include name="launchBrowser"/>
+          <include name="Tc_01"/>
+          <include name="Tc_02"/>
         </methods>
-      </class> <!-- com.etsyframewok.Tests.VerifyLogo -->
+      </class> <!-- com.etsyframework.Testcase.TestRegression -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
