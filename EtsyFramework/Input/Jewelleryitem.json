@@ -1,0 +1,71 @@
+{
+	"Accessories": [
+		"Hats & Caps",
+		"Beanies & Winter Hats",
+		"Hair Accessories",
+		"Headbands",
+		"Fascinators & Mini Hats",
+		"Wreaths & Tiaras",
+		"Sunglasses & Eyewear",
+		"Scarves & Wraps",
+		"Belts & Braces",
+		"Keychains & Lanyards",
+		"Gloves & Mittens",
+		"Umbrellas & Rain Accessories",
+		"All Accessories"
+	],
+	"Bags & Purses": [
+		"Backpacks",
+		"Handbags",
+		"Clutches & Evening Bags",
+		"Shoulder Bags",
+		"Diaper Bags",
+		"Luggage & Duffel Bags",
+		"Phone Cases",
+		"All Bags & Purses"
+	],
+	"Necklaces": [
+		"Pendants",
+		"Chokers",
+		"Charm Necklaces",
+		"Crystal Necklaces",
+		"Monogram & Name Necklaces",
+		"Beaded Necklaces",
+		"Chains",
+		"Bib Necklaces",
+		"Tassel Necklaces"
+	],
+	"Rings": [
+		"Stackable Rings",
+		"Statement Rings",
+		"Bands",
+		"Signet Rings",
+		"Multi-Stone Rings",
+		"Solitaire Rings",
+		"Midi Rings",
+		"Wedding & Engagement",
+		"Engagement Rings",
+		"Wedding Bands",
+		"Promise Rings",
+		"Bridal Sets"
+	],
+	"Earrings": [
+		"Dangle & Drop Earrings",
+		"Stud Earrings",
+		"Hoop Earrings",
+		"Chandelier Earrings",
+		"Ear Jackets & Climbers",
+		"Cluster Earrings",
+		"Cuff & Wrap Earrings",
+		"Clip-On Earrings"
+	],
+	"Bracelets": [
+		"Beaded Bracelets",
+		"Bangles",
+		"Charm Bracelets",
+		"Woven & Braided Bracelets",
+		"Cuff Bracelets",
+		"Chain & Link Bracelets"
+	]
+
+}

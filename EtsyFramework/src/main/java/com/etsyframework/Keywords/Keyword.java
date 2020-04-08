@@ -5,6 +5,7 @@ import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.Set;
@@ -12,6 +13,9 @@ import java.util.concurrent.TimeUnit;
 
 import javax.imageio.ImageIO;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
@@ -23,7 +27,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
@@ -34,20 +37,20 @@ public class Keyword {
 
 		switch (browserName) {
 		case "Chrome":
-			WebDriverManager.chromedriver().setup();
-			Constants.driver = new ChromeDriver();
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\Admin\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		    Constants.driver = new ChromeDriver();
 			Constants.driver.manage().window().maximize();
 			break;
 
 		case "Firefox":
-			WebDriverManager.firefoxdriver();
+			System.setProperty("webdriver.Firefox.driver","E:\\geckodriver-v0.26.0-win64\\geckodriver.exe");
 			Constants.driver = new FirefoxDriver();
 			Constants.driver.manage().window().maximize();
 			break;
 		/*
 		 * case "htmlUnit": System.setProperty("webdriver.chrome.driver",
 		 * "D:\\All Driver.exe files\\chromedriver_win32\\chromedriver.exe");
-		 * Constants.driver = new HtmlUnitDriver(); break;
+		 * constants.driver = new HtmlUnitDriver(); break;
 		 */
 		default:
 			System.out.println("invalid browser name" + browserName);
@@ -109,57 +112,54 @@ public class Keyword {
 		Constants.select.selectByVisibleText(selectText);
 
 	}
-
+	
 	public static void handleAlertWithAccept() {
 		Constants.driver.switchTo().alert().accept();
 
 	}
-
+	
 	public static void handleAlertWithDismiss() {
 		Constants.driver.switchTo().alert().dismiss();
 
 	}
-
+	
 	public static String getAlertText() {
-		String text = Constants.driver.switchTo().alert().getText();
-		System.out.println("Alert text is" + text);
+		String text=Constants.driver.switchTo().alert().getText();
+		System.out.println("Alert text is"+text);
 		return text;
 	}
 
 	public static void getScreenShot() {
-
+		
 		try {
 			Constants.robo = new Robot();
 		} catch (AWTException e1) {
-
+			
 		}
-		Rectangle rect = new Rectangle();
-		rect.setFrame(0, 0, 700, 500);
-		BufferedImage img = Constants.robo.createScreenCapture(rect);
-		try {
+	    Rectangle rect=new Rectangle();
+	    rect.setFrame(0, 0, 700, 500);
+	    BufferedImage img=Constants.robo.createScreenCapture(rect);
+	    try {
 			ImageIO.write(img, "png", new File("NewImage.png"));
-
-		} catch (IOException e) {
+		
+	    } catch (IOException e) {
 			System.out.println("Could not save image");
 		}
-	}
-
+	  }
 	public static void getFullPageScreenShot() {
-		AShot ashot = new AShot();
-		Screenshot sc = ashot.shootingStrategy(ShootingStrategies.viewportPasting(1000))
-				.takeScreenshot(Constants.driver);
-		try {
-			ImageIO.write(sc.getImage(), "jpg", new File("UsingScreenshot.jpg"));
+		AShot ashot=new AShot();
+	    Screenshot sc=ashot.shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(Constants.driver);
+	    try {
+			ImageIO.write(sc.getImage(),"jpg", new File("UsingScreenshot.jpg"));
 		} catch (IOException e) {
 			System.out.println("Could not save image");
 		}
 
 	}
-
 	public static boolean isAlertPresent() {
 		try {
 			Constants.driver.switchTo().alert().accept();
-
+			
 			return true;
 
 		} catch (Exception e) {
@@ -185,6 +185,7 @@ public class Keyword {
 	public static void applySleep() throws InterruptedException {
 		Thread.sleep(3000);
 	}
+	
 
 	public static void switchToWindow() {
 		String parentwindow = Constants.driver.getWindowHandle();
@@ -196,6 +197,7 @@ public class Keyword {
 		}
 
 	}
+	
 
 	public static String getTitle(String title) {
 		Constants.driver.getTitle();
@@ -228,33 +230,57 @@ public class Keyword {
 		Constants.action = new Actions(Constants.driver);
 		Constants.action.moveToElement(element).perform();
 	}
-
+	
 	public static void doubleClick() {
 		Constants.action = new Actions(Constants.driver);
 		Constants.action.doubleClick().perform();
 
 	}
-
+	
 	public static void rightClick() {
 		Constants.action = new Actions(Constants.driver);
 		Constants.action.contextClick().perform();
 
 	}
-
+	
 	public static void scrollByDown() {
 		JavascriptExecutor js = (JavascriptExecutor) Constants.driver;
 		js.executeScript("window.scrollBy(0,2000)");
 	}
-
+	
 	public static void handlePopUp() {
-
+		
 		Constants.options = new ChromeOptions();
 		Constants.options.addArguments("--disable-notifications");
 	}
+	
+	public static void jewellerypage() {
+		try
+	    {
+		JSONParser parser = new JSONParser();
+		Object obj = parser.parse(new FileReader("E:\\JavaProgram\\EtsyFramework\\Input\\Jewelleryitem.json"));
+		JSONObject uj=(JSONObject)obj;
+		JSONArray unit = (JSONArray)uj.get("Bags & Purses");
+		//System.out.println(unit+"\n");
+		 for(int i=0;i<unit.size();i++) 
+		 {
+			 System.out.println(unit.get(i));
+		 }
+		 Thread.sleep(3000);
+	     //Assert.assertTrue(Keyword.verifyTextPresent("Browser"));
+	     System.out.println("Assert true");
+	   }
+	   catch (Exception e)
+	   {
+	   e.printStackTrace();	
+	   }
+	   }
 
 	public static void uploadFile() {
+		
 
 	}
+	
 
 	public static void closeBrowser() {
 		Constants.driver.quit();
