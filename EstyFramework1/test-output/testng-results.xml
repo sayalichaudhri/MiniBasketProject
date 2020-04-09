@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14212" started-at="2020-03-02T08:37:31Z" finished-at="2020-03-02T08:37:45Z">
+  <suite name="Default suite" duration-ms="74927" started-at="2020-04-09T12:43:35Z" finished-at="2020-04-09T12:44:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14212" started-at="2020-03-02T08:37:31Z" finished-at="2020-03-02T08:37:45Z">
-      <class name="com.esty.tests.TestCase1">
-        <test-method status="PASS" signature="Tc_01()[pri:0, instance:com.esty.tests.TestCase1@5ae9a829]" name="Tc_01" duration-ms="14172" started-at="2020-03-02T14:07:31Z" finished-at="2020-03-02T14:07:45Z">
+    <test name="Default test" duration-ms="74927" started-at="2020-04-09T12:43:35Z" finished-at="2020-04-09T12:44:50Z">
+      <class name="com.testcase.TestRegression">
+        <test-method status="PASS" signature="Tc_01()[pri:0, instance:com.testcase.TestRegression@7920ba90]" name="Tc_01" duration-ms="23028" started-at="2020-04-09T12:43:35Z" finished-at="2020-04-09T12:43:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tc_01 -->
-      </class> <!-- com.esty.tests.TestCase1 -->
+        <test-method status="PASS" signature="Tc_02()[pri:0, instance:com.testcase.TestRegression@7920ba90]" name="Tc_02" is-config="true" duration-ms="51818" started-at="2020-04-09T12:43:58Z" finished-at="2020-04-09T12:44:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc_02 -->
+      </class> <!-- com.testcase.TestRegression -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
